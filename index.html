@@ -10,10 +10,10 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
 <title>Escala - Agência NMB</title>
 <style>
-:root{--bg:#0b0b10;--surface:#13131c;--card:#1a1a28;--border:#252535;--border2:#32324a;--text:#e8e4f0;--muted:#5a576e;--accent:#1a3a6c;--paid-light:#4caf7d;--pend-light:#e05555;--accent-light:#3a6aac;}
+:root{--bg:#0b0b10;--surface:#13131c;--card:#1a1a28;--border:#252535;--border2:#32324a;--text:#e8e4f0;--muted:#9590a8;--accent:#1a3a6c;--paid-light:#4caf7d;--pend-light:#e05555;--accent-light:#3a6aac;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html,body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-apple-system,'Inter',Roboto,'Helvetica Neue',sans-serif;min-height:100vh;overflow-x:hidden;-webkit-tap-highlight-color:transparent;touch-action:pan-y;}
-body.light{--bg:#fff;--surface:#f2f2f2;--card:#fff;--border:#d0d0d0;--border2:#a0a0a0;--text:#111;--muted:#444;--accent:#1a3a6c;--paid-light:#1e8449;--pend-light:#c0392b;--accent-light:#3a6aac;}
+body.light{--bg:#fff;--surface:#f2f2f2;--card:#fff;--border:#d0d0d0;--border2:#a0a0a0;--text:#111;--muted:#555;--accent:#1a3a6c;--paid-light:#1e8449;--pend-light:#c0392b;--accent-light:#3a6aac;}
 body.light,html:has(body.light){background:#fff!important;}
 body.light .sync-banner{background:#f0f0f0;color:#333;border-bottom:1px solid #d0d0d0;}
 body.light .sheet{background:#f0ede4;}
@@ -48,17 +48,17 @@ body.light::after{display:none;}
 .top-bar{display:flex;align-items:center;justify-content:space-between;padding:14px 18px 0;gap:8px;flex-wrap:wrap;position:sticky;top:0;z-index:500;background:var(--bg);}
 .top-bar-right{display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:flex-end;}
 .tbtn{display:flex;align-items:center;gap:5px;font-family:inherit;font-size:12px;font-weight:700;letter-spacing:.8px;padding:7px 12px;border-radius:20px;cursor:pointer;user-select:none;border:1px solid;transition:transform .1s,box-shadow .12s;text-transform:uppercase;}.tbtn:active{transform:scale(.95);}
-.tbtn-cfg{background:rgba(26,58,108,.18);border-color:rgba(26,58,108,.3);color:#555;}
-.tbtn-share{background:rgba(26,58,108,.18);border-color:rgba(26,58,108,.3);color:#555;}
+.tbtn-cfg{background:rgba(26,58,108,.18);border-color:rgba(26,58,108,.3);color:var(--text);}
+.tbtn-share{background:rgba(26,58,108,.18);border-color:rgba(26,58,108,.3);color:var(--text);}
 .cloud-badge{display:flex;align-items:center;gap:5px;font-size:12px;font-weight:700;color:var(--accent);background:rgba(26,58,108,.06);border:1px solid rgba(26,58,108,.15);border-radius:20px;padding:6px 12px;letter-spacing:.3px;}
 .view-toggle{display:flex;gap:0;margin:12px 18px 0;border-radius:10px;overflow:hidden;border:1.5px solid var(--accent);}
 .view-toggle-btn{flex:1;padding:10px 16px;text-align:center;font-family:inherit;font-size:12px;font-weight:700;cursor:pointer;user-select:none;border:none;background:transparent;color:var(--accent);}
 .view-toggle-btn.active{background:var(--accent);color:#fff;}
 .filter-bar{display:flex;flex-wrap:wrap;gap:6px;padding:10px 18px;border-bottom:1px solid var(--border);align-items:center;position:sticky;top:46px;z-index:499;background:var(--bg);}
-.filter-bar-label{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#333;font-weight:700;}
+.filter-bar-label{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text);font-weight:700;}
 .filter-chip{display:flex;align-items:center;gap:5px;padding:4px 10px;border-radius:20px;font-size:12px;font-family:inherit;font-weight:700;cursor:pointer;border:1.5px solid transparent;user-select:none;opacity:.45;transition:opacity .15s,transform .1s;}
 .filter-chip.active{opacity:1;transform:scale(1.05);}.filter-chip:active{transform:scale(.93);}
-.hint{text-align:center;font-size:12px;letter-spacing:2px;color:#555;padding:7px;text-transform:uppercase}
+.hint{text-align:center;font-size:12px;letter-spacing:2px;color:var(--muted);padding:7px;text-transform:uppercase}
 .cal-wrap{padding:0 8px 8px;overflow-x:auto}
 .calendar{display:grid;grid-template-columns:repeat(7,minmax(116px,1fr));gap:3px;min-width:700px}
 .day-hdr{background:var(--surface);text-align:center;padding:9px 4px;font-size:12px;letter-spacing:3px;color:var(--muted);text-transform:uppercase;font-weight:700;}
@@ -78,10 +78,10 @@ body.light::after{display:none;}
 .add-btn:hover{color:var(--accent);border-color:var(--accent)}
 .comment-bubble{display:flex;align-items:flex-start;gap:5px;background:rgba(26,58,108,.07);border:1px solid rgba(26,58,108,.18);border-radius:8px;padding:5px 7px;margin-top:1px;cursor:pointer;transition:background .12s;}.comment-bubble:hover{background:rgba(26,58,108,.1);}
 .comment-bubble .cb-icon{font-size:12px;flex-shrink:0;opacity:.7;}
-.comment-bubble .cb-text{font-size:13px;line-height:1.4;word-break:break-word;flex:1;color:#333;}
+.comment-bubble .cb-text{font-size:13px;line-height:1.4;word-break:break-word;flex:1;color:var(--text);}
 .comment-bubble .cb-edit{font-size:12px;color:var(--accent);opacity:0;}
 .comment-bubble:hover .cb-edit{opacity:1;}
-.add-comment-btn{font-size:12px;text-transform:uppercase;color:#555;opacity:.65;cursor:pointer;padding:1px 0;user-select:none;display:flex;align-items:center;gap:3px;}
+.add-comment-btn{font-size:12px;text-transform:uppercase;color:var(--muted);opacity:.65;cursor:pointer;padding:1px 0;user-select:none;display:flex;align-items:center;gap:3px;}
 .add-comment-btn:hover{opacity:1;color:var(--accent);}
 .badge{display:flex;align-items:center;gap:5px;padding:5px 9px 5px 5px;border-radius:30px;font-size:12px;font-weight:700;cursor:grab;user-select:none;border:2px solid transparent;touch-action:none;}
 .badge:active{cursor:grabbing;transform:scale(.94);}
@@ -253,24 +253,24 @@ body::after,.top-bar,.hint,.overlay,.confirm-overlay,#ghost,#toast,footer,.add-b
 <button class="tbtn" style="background:var(--surface);border-color:var(--border);color:var(--muted);" onclick="toggleTheme()">📴</button>
 <button class="tbtn tbtn-cfg" onclick="openPeopleConfig()">🧑🏻 Usuários</button>
 <button class="tbtn tbtn-cfg" onclick="openShiftConfig()">🕐 Turnos</button>
-<button class="tbtn" onclick="openSolicitacao()" style="background:rgba(26,58,108,.18);border-color:rgba(26,58,108,.3);color:#555;">📧 Nova Solicitação</button>
-<button class="tbtn" onclick="openSolicitacoesAdmin()" style="background:rgba(26,58,108,.18);border-color:rgba(26,58,108,.3);color:#555;position:relative;">📧 Solicitações <span id="sol-badge-1" style="display:none;position:absolute;top:-4px;right:-4px;background:#e05555;color:#fff;font-size:12px;font-weight:800;min-width:16px;height:16px;border-radius:50%;align-items:center;justify-content:center;"></span></button>
-<button class="tbtn" style="background:rgba(26,58,108,.18);border-color:rgba(26,58,108,.3);color:#555;" onclick="openPrintSheet()">🖨️ Imprimir</button>
+<button class="tbtn" onclick="openSolicitacao()" style="background:rgba(26,58,108,.18);border-color:rgba(26,58,108,.3);color:var(--text);">📧 Nova Solicitação</button>
+<button class="tbtn" onclick="openSolicitacoesAdmin()" style="background:rgba(26,58,108,.18);border-color:rgba(26,58,108,.3);color:var(--text);position:relative;">📧 Solicitações <span id="sol-badge-1" style="display:none;position:absolute;top:-4px;right:-4px;background:#e05555;color:#fff;font-size:12px;font-weight:800;min-width:16px;height:16px;border-radius:50%;align-items:center;justify-content:center;"></span></button>
+<button class="tbtn" style="background:rgba(26,58,108,.18);border-color:rgba(26,58,108,.3);color:var(--text);" onclick="openPrintSheet()">🖨️ Imprimir</button>
 <button class="tbtn tbtn-share" onclick="shareReadOnly()">🔗 Compartilhar</button>
-<button class="tbtn" onclick="downloadBackup()" style="background:rgba(26,58,108,.18);border-color:rgba(26,58,108,.3);color:#555;">💾 Backup</button>
-<button class="tbtn" onclick="logoutAdmin()" style="background:rgba(26,58,108,.18);border-color:rgba(26,58,108,.3);color:#555;">🚪 Sair</button>
+<button class="tbtn" onclick="downloadBackup()" style="background:rgba(26,58,108,.18);border-color:rgba(26,58,108,.3);color:var(--text);">💾 Backup</button>
+<button class="tbtn" onclick="logoutAdmin()" style="background:rgba(26,58,108,.18);border-color:rgba(26,58,108,.3);color:var(--text);">🚪 Sair</button>
 </div></div>
 <div class="filter-bar" id="filter-bar"><span class="filter-bar-label">Usuário:</span></div>
 <template id="admin-buttons-template">
 <button class="tbtn" style="background:var(--surface);border-color:var(--border);color:var(--muted);" onclick="toggleTheme()">📴</button>
 <button class="tbtn tbtn-cfg" onclick="openPeopleConfig()">🧑🏻 Usuários</button>
 <button class="tbtn tbtn-cfg" onclick="openShiftConfig()">🕐 Turnos</button>
-<button class="tbtn" onclick="openSolicitacao()" style="background:rgba(26,58,108,.18);border-color:rgba(26,58,108,.3);color:#555;">📧 Nova Solicitação</button>
-<button class="tbtn" onclick="openSolicitacoesAdmin()" style="background:rgba(26,58,108,.18);border-color:rgba(26,58,108,.3);color:#555;position:relative;">📧 Solicitações <span id="sol-badge-2" style="display:none;position:absolute;top:-4px;right:-4px;background:#e05555;color:#fff;font-size:12px;font-weight:800;min-width:16px;height:16px;border-radius:50%;align-items:center;justify-content:center;"></span></button>
-<button class="tbtn" style="background:rgba(26,58,108,.18);border-color:rgba(26,58,108,.3);color:#555;" onclick="openPrintSheet()">🖨️ Imprimir</button>
+<button class="tbtn" onclick="openSolicitacao()" style="background:rgba(26,58,108,.18);border-color:rgba(26,58,108,.3);color:var(--text);">📧 Nova Solicitação</button>
+<button class="tbtn" onclick="openSolicitacoesAdmin()" style="background:rgba(26,58,108,.18);border-color:rgba(26,58,108,.3);color:var(--text);position:relative;">📧 Solicitações <span id="sol-badge-2" style="display:none;position:absolute;top:-4px;right:-4px;background:#e05555;color:#fff;font-size:12px;font-weight:800;min-width:16px;height:16px;border-radius:50%;align-items:center;justify-content:center;"></span></button>
+<button class="tbtn" style="background:rgba(26,58,108,.18);border-color:rgba(26,58,108,.3);color:var(--text);" onclick="openPrintSheet()">🖨️ Imprimir</button>
 <button class="tbtn tbtn-share" onclick="shareReadOnly()">🔗 Compartilhar</button>
-<button class="tbtn" onclick="downloadBackup()" style="background:rgba(26,58,108,.18);border-color:rgba(26,58,108,.3);color:#555;">💾 Backup</button>
-<button class="tbtn" onclick="logoutAdmin()" style="background:rgba(26,58,108,.18);border-color:rgba(26,58,108,.3);color:#555;">🚪 Sair</button>
+<button class="tbtn" onclick="downloadBackup()" style="background:rgba(26,58,108,.18);border-color:rgba(26,58,108,.3);color:var(--text);">💾 Backup</button>
+<button class="tbtn" onclick="logoutAdmin()" style="background:rgba(26,58,108,.18);border-color:rgba(26,58,108,.3);color:var(--text);">🚪 Sair</button>
 </template>
 <div id="calendar-view"><div id="calendars-container"></div></div>
 <div id="ponto-view"></div>
@@ -343,7 +343,7 @@ function promptLogin(){openSheet('Acesso','Entrar',function(body){var fg=documen
 function isPersonVisible(name){var p=gP(name);if(activeSetorFilters.size>0&&!activeSetorFilters.has(p.setor||'Agência'))return false;if(activeFilters.size>0&&!activeFilters.has(name))return false;return true;}
 function toggleFilter(n,e){if(e&&(e.ctrlKey||e.metaKey)){if(activeFilters.has(n))activeFilters.delete(n);else activeFilters.add(n);}else{if(activeFilters.size===1&&activeFilters.has(n))activeFilters.clear();else{activeFilters.clear();activeFilters.add(n);}}renderAll();}
 function toggleSetorFilter(s,e){if(e&&(e.ctrlKey||e.metaKey)){if(activeSetorFilters.has(s))activeSetorFilters.delete(s);else activeSetorFilters.add(s);}else{if(activeSetorFilters.size===1&&activeSetorFilters.has(s))activeSetorFilters.clear();else{activeSetorFilters.clear();activeSetorFilters.add(s);}}renderAll();}
-function buildFilterBar(){var fb=document.getElementById('filter-bar');fb.innerHTML='<span class="filter-bar-label">Usu\u00e1rio:</span>';var all=document.createElement('div');all.className='filter-chip'+(activeFilters.size===0?' active':'');all.style.cssText='background:rgba(26,58,108,.1);border-color:rgba(26,58,108,.3);color:var(--accent);';all.textContent='Todos';all.onclick=function(){activeFilters.clear();renderAll();};fb.appendChild(all);people.forEach(p=>{if((p.setor||'')==='Coordenação')return;var c=document.createElement('div');c.className='filter-chip'+(activeFilters.has(p.name)?' active':'');c.style.cssText='background:'+p.color+'18;border-color:'+p.color+'55;color:'+p.color+';';c.innerHTML='<span style="width:7px;height:7px;border-radius:50%;background:'+p.color+';display:inline-block;"></span><span style="color:#555;">'+escH(p.name)+'</span>';c.onclick=function(e){toggleFilter(p.name,e);};fb.appendChild(c);});fb.insertAdjacentHTML('beforeend','<span style="width:1px;height:20px;background:var(--border);margin:0 4px;"></span><span class="filter-bar-label">Setor:</span>');var allS=document.createElement('div');allS.className='filter-chip'+(activeSetorFilters.size===0?' active':'');allS.style.cssText='background:rgba(26,58,108,.1);border-color:rgba(26,58,108,.3);color:var(--accent);';allS.textContent='Todos';allS.onclick=function(){activeSetorFilters.clear();renderAll();};fb.appendChild(allS);SETORES.forEach(function(s){var c=document.createElement('div');c.className='filter-chip'+(activeSetorFilters.has(s)?' active':'');c.style.cssText='background:rgba(26,58,108,.06);border-color:rgba(26,58,108,.2);color:#555;';c.textContent=s;c.onclick=function(e){toggleSetorFilter(s,e);};fb.appendChild(c);});}
+function buildFilterBar(){var fb=document.getElementById('filter-bar');fb.innerHTML='<span class="filter-bar-label">Usu\u00e1rio:</span>';var all=document.createElement('div');all.className='filter-chip'+(activeFilters.size===0?' active':'');all.style.cssText='background:rgba(26,58,108,.1);border-color:rgba(26,58,108,.3);color:var(--accent);';all.textContent='Todos';all.onclick=function(){activeFilters.clear();renderAll();};fb.appendChild(all);people.forEach(p=>{if((p.setor||'')==='Coordenação')return;var c=document.createElement('div');c.className='filter-chip'+(activeFilters.has(p.name)?' active':'');c.style.cssText='background:'+p.color+'18;border-color:'+p.color+'55;color:'+p.color+';';c.innerHTML='<span style="width:7px;height:7px;border-radius:50%;background:'+p.color+';display:inline-block;"></span><span style="color:#555;">'+escH(p.name)+'</span>';c.onclick=function(e){toggleFilter(p.name,e);};fb.appendChild(c);});fb.insertAdjacentHTML('beforeend','<span style="width:1px;height:20px;background:var(--border);margin:0 4px;"></span><span class="filter-bar-label">Setor:</span>');var allS=document.createElement('div');allS.className='filter-chip'+(activeSetorFilters.size===0?' active':'');allS.style.cssText='background:rgba(26,58,108,.1);border-color:rgba(26,58,108,.3);color:var(--accent);';allS.textContent='Todos';allS.onclick=function(){activeSetorFilters.clear();renderAll();};fb.appendChild(allS);SETORES.forEach(function(s){var c=document.createElement('div');c.className='filter-chip'+(activeSetorFilters.has(s)?' active':'');c.style.cssText='background:rgba(26,58,108,.06);border-color:rgba(26,58,108,.2);color:var(--text);';c.textContent=s;c.onclick=function(e){toggleSetorFilter(s,e);};fb.appendChild(c);});}
 function prevMonth(){currentMonth--;if(currentMonth<0){currentMonth=11;currentYear--;}renderAll();}
 function nextMonth(){currentMonth++;if(currentMonth>11){currentMonth=0;currentYear++;}renderAll();}
 function openMonthPicker(){openSheet('Nav','Selecionar M\u00eas e Ano',function(body){var fg1=document.createElement('div');fg1.className='form-group';var l1=document.createElement('div');l1.className='form-label';l1.textContent='Ano';var selY=document.createElement('select');selY.className='text-input';for(var y=2026;y<=2035;y++){var o=document.createElement('option');o.value=y;o.textContent=y;if(y===currentYear)o.selected=true;selY.appendChild(o);}fg1.appendChild(l1);fg1.appendChild(selY);body.appendChild(fg1);var fg2=document.createElement('div');fg2.className='form-group';var l2=document.createElement('div');l2.className='form-label';l2.textContent='M\u00eas';var selM=document.createElement('select');selM.className='text-input';MONTHS_PT.forEach(function(m,i){var o=document.createElement('option');o.value=i;o.textContent=m;if(i===currentMonth)o.selected=true;selM.appendChild(o);});fg2.appendChild(l2);fg2.appendChild(selM);body.appendChild(fg2);var btn=document.createElement('button');btn.className='confirm-btn';btn.textContent='Ir';btn.onclick=function(){currentYear=+selY.value;currentMonth=+selM.value;closeSheet();renderAll();};body.appendChild(btn);var cls=document.createElement('button');cls.className='cancel-btn';cls.textContent='\u2715 Fechar';cls.onclick=closeSheet;body.appendChild(cls);});}
